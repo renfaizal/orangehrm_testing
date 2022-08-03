@@ -1,0 +1,1292 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases
+,,,,,,,,,,,,,,,,,,,,1,,Login,1
+,,,,,,,,,,,,,,,,,,,,2,,Admin,1
+,,,,,,,,,,,,,,,,,,,,13,2,Job,1
+,,,,,,,,,,,,,,,,,,,,14,13,"Job Titles",1
+,,,,,,,,,,,,,,,,,,,,15,13,"Pay Grades",1
+,,,,,,,,,,,,,,,,,,,,16,13,"Employment Status",1
+,,,,,,,,,,,,,,,,,,,,17,13,"Job Categories",1
+,,,,,,,,,,,,,,,,,,,,18,13,"Work Shift",1
+,,,,,,,,,,,,,,,,,,,,19,2,Nationalities,1
+,,,,,,,,,,,,,,,,,,,,20,2,Qualifications,1
+,,,,,,,,,,,,,,,,,,,,21,20,Skills,1
+,,,,,,,,,,,,,,,,,,,,22,20,Education,1
+,,,,,,,,,,,,,,,,,,,,23,20,Licenses,1
+,,,,,,,,,,,,,,,,,,,,24,20,Languange,1
+,,,,,,,,,,,,,,,,,,,,25,20,Memberships,1
+,,,,,,,,,,,,,,,,,,,,3,,PIM,1
+,,,,,,,,,,,,,,,,,,,,26,3,"Employee List",1
+,,,,,,,,,,,,,,,,,,,,27,3,"Add Employee",1
+,,,,,,,,,,,,,,,,,,,,4,,Leave,1
+,,,,,,,,,,,,,,,,,,,,29,4,Entitlements,1
+,,,,,,,,,,,,,,,,,,,,37,29,"Add Entitlements",1
+,,,,,,,,,,,,,,,,,,,,38,29,"Employee Entitlements",1
+,,,,,,,,,,,,,,,,,,,,5,,Time,1
+,,,,,,,,,,,,,,,,,,,,30,5,"Project Info",1
+,,,,,,,,,,,,,,,,,,,,39,30,Customers,1
+,,,,,,,,,,,,,,,,,,,,40,30,Projects,1
+,,,,,,,,,,,,,,,,,,,,6,,Recruitment,1
+,,,,,,,,,,,,,,,,,,,,31,6,Candidates,1
+,,,,,,,,,,,,,,,,,,,,32,6,Vacancies,1
+,,,,,,,,,,,,,,,,,,,,7,,MyInfo,1
+,,,,,,,,,,,,,,,,,,,,8,,Performance,1
+,,,,,,,,,,,,,,,,,,,,33,8,Configure,1
+,,,,,,,,,,,,,,,,,,,,34,33,KPIs,1
+,,,,,,,,,,,,,,,,,,,,35,33,Trackers,1
+,,,,,,,,,,,,,,,,,,,,9,,Dashboard,1
+,,,,,,,,,,,,,,,,,,,,10,,Directory,1
+,,,,,,,,,,,,,,,,,,,,11,,Maintenance,1
+,,,,,,,,,,,,,,,,,,,,36,11,"Access Records",1
+,,,,,,,,,,,,,,,,,,,,12,,Buzz,1
+1,"Login ke OrangeHRM Successful","Login dilakukan melalui halaman https://opensource-demo.orangehrmlive.com/","1. username: Admin
+2. password: admin123",,,high,critical,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Buka halaman login
+2. Isikan username
+3. Isikan password
+4. Klik tombol Login
+","1. 
+2. 
+3. 
+4. User akan diarahkan ke halaman dashboard OrangeHRM
+","1. <br>
+2. username: Admin
+3. password: admin123
+4. 
+",1,"OrangeHRM 4.10.1",1,,Login,
+2,"Login ke OrangeHRM Failed with Wrong Username","Login dilakukan melalui halaman https://opensource-demo.orangehrmlive.com/","1. username: testlogin
+2. password: admin123",,,high,critical,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Buka halaman login
+2. Isikan username
+3. Isikan password
+4. Klik tombol Login
+","1. 
+2. 
+3. 
+4. User akan ditampilkan pesan ""**Invalid credentials**"" pada form login
+","1. <br>
+2. username: testlogin
+3. password: admin123
+4. 
+",1,"OrangeHRM 4.10.1",1,,Login,
+3,"Login ke OrangeHRM Failed with Wrong Password","Login dilakukan melalui halaman https://opensource-demo.orangehrmlive.com/","1. username: Admin
+2. password: passAdmin",,,high,critical,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Buka halaman login
+2. Isikan username
+3. Isikan password
+4. Klik tombol Login
+","1. 
+2. 
+3. 
+4. User akan ditampilkan pesan ""**Invalid credentials**"" pada form login
+","1. <br>
+2. username: Admin
+3. password: passAdmin
+4. 
+",1,"OrangeHRM 4.10.1",1,,Login,
+4,"Login ke OrangeHRM Failed with Empty Password","Login dilakukan melalui halaman https://opensource-demo.orangehrmlive.com/","1. username: Admin
+2. password:",,,high,critical,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Buka halaman login
+2. Isikan username
+3. Kosongkan field password
+4. Klik tombol Login
+","1. 
+2. 
+3. 
+4. User akan ditampilkan pesan ""**Password cannot be empty**"" pada form login
+","1. <br>
+2. username: Admin
+3. password:
+4. 
+",1,"OrangeHRM 4.10.1",1,,Login,
+5,"Login ke OrangeHRM Failed with Empty Username","Login dilakukan melalui halaman https://opensource-demo.orangehrmlive.com/","1. username: 
+2. password: admin123",,,high,critical,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Buka halaman login
+2. Kosongkan field username
+3. Isikan password
+4. Klik tombol Login
+","1. 
+2. 
+3. 
+4. User akan ditampilkan pesan ""**Username cannot be empty**"" pada form login
+","1. <br>
+2. username:
+3. password: admin123
+4. 
+",1,"OrangeHRM 4.10.1",1,,Login,
+6,"Login ke OrangeHRM Failed with Empty Username and Password","Login dilakukan melalui halaman https://opensource-demo.orangehrmlive.com/","1. username:
+2. password:",,,high,critical,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Buka halaman login
+2. Kosongkan field username
+3. Kosongkan field password
+4. Klik tombol Login
+","1. 
+2. 
+3. 
+4. User akan ditampilkan pesan ""**Username cannot be empty**"" pada form login
+","1. <br>
+2. username:
+3. password:
+4. 
+",1,"OrangeHRM 4.10.1",1,,Login,
+7,"Menambahkan Job Title",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Admin
+2. Hover pointer mouse pada sub menu Job
+3. Klik sub menu Job Titles
+4. Klik tombol Add
+5. Isikan Job Titles
+6. Isikan Job Description
+7. Lampirkan file Job Specification
+8. Isikan Note
+9. Klik tombol Save
+","1. Ditampilkan halaman Admin
+2. Ditampilkan menu dropdown dari sub menu Job
+3. Ditampilkan halaman Job Titles dan daftar Job Titles
+4. Ditampilkan form untuk menambahkan Job Titles
+5. 
+6. 
+7. 
+8. 
+9. User akan diredirect ke halaman Job Titles dan ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. 
+5. Isikan nama pekerjaan: DevOps
+6. Bersifat opsional
+7. 1. Bersifat opsional
+2. Dapat dilampiran file dengan ukuran max 1MB
+8. Bersifat opsional
+9. 
+",1,"OrangeHRM 4.10.1",14,13,"Job Titles",
+8,"Menambahkan Job Title Failed with empty field",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Admin
+2. Hover pointer mouse pada sub menu Job
+3. Klik sub menu Job Titles
+4. Klik tombol Add
+5. Kosongkan Job Titles
+6. Kosongkan Job Description
+7. Tidak melampirkan file Job Specification
+8. Kosongkan Note
+9. Klik tombol Save
+","1. Ditampilkan halaman Admin
+2. Ditampilkan menu dropdown dari sub menu Job
+3. Ditampilkan halaman Job Titles dan daftar Job Titles
+4. Ditampilkan form untuk menambahkan Job Titles
+5. 
+6. 
+7. 
+8. 
+9. Kursor akan diaktifkan pada kolom Job Titles dan diberikan pesan ""**Required**""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",14,13,"Job Titles",
+9,"Batal Menambahkan Job Title",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Admin
+2. Hover pointer mouse pada sub menu Job
+3. Klik sub menu Job Titles
+4. Klik tombol Add
+5. Isikan Job Titles
+6. Isikan Job Description
+7. Lampirkan file Job Specification
+8. Isikan Note
+9. Klik tombol Cancel
+","1. Ditampilkan halaman Admin
+2. Ditampilkan menu dropdown dari sub menu Job
+3. Ditampilkan halaman Job Titles dan daftar Job Titles
+4. Ditampilkan form untuk menambahkan Job Titles
+5. 
+6. 
+7. 
+8. 
+9. User akan diredirect ke halaman Job Titles
+","1. 
+2. 
+3. 
+4. 
+5. Isikan nama pekerjaan: DevOps
+6. Bersifat opsional
+7. Bersifat opsional
+8. Bersifat opsional
+9. 
+",1,"OrangeHRM 4.10.1",14,13,"Job Titles",
+35,"Menghapus Job Title",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Admin
+2. Hover pointer mouse pada sub menu Job
+3. Klik sub menu Job Titles
+4. Centang checkbox pada list Job Titles
+5. Klik tombol Delete
+6. Klik OK
+","1. Ditampilkan halaman Admin
+2. Ditampilkan menu dropdown dari sub menu Job
+3. Ditampilkan halaman Job Titles dan daftar Job Titles
+4. Checkbox checked
+5. Ditampilkan modal untuk konfirmasi Delete Job Title
+6. User akan diredirect ke halaman Job Titles dan ditampilkan pesan ""Successfully Deleted""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",1,"OrangeHRM 4.10.1",14,13,"Job Titles",
+10,"Toggle form pencarian karyawan",,"1. Sudah login ke OrangeHRM",,,low,minor,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik pada header Employee Information
+","1. Ditampilkan halaman Employee List
+2. Form pencarian karyawan akan disembunyikan
+","1. 
+2. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+11,"Mencari Employee berdasarkan Nama Employee",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Isikan nama Employee
+3. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. 
+3. Ditampilkan daftar Employe dengan nama Sania
+","1. 
+2. nama employee: Sania
+3. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+12,"Mencari Employee berdasarkan Nama Employee yang tidak terdaftar",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Isikan nama Employee
+3. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. 
+3. Ditampilkan daftar Employe dan pesan ""**No Records Found**""
+","1. 
+2. nama employee: Jojon
+3. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+13,"Mencari Employee berdasarkan ID Employee",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Isikan ID Employee
+3. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. 
+3. Ditampilkan daftar Employe dengan ID Employee 0087
+","1. 
+2. nama employee: 0087
+3. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+14,"Mencari Employee berdasarkan ID Employee dengan ID Employee yang tidak terdaftar",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Isikan ID Employee
+3. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. 
+3. Ditampilkan daftar Employe dengan pesan ""**No Records Found**""
+","1. 
+2. nama employee: 0400
+3. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+15,"Mencari Employee berdasarkan Employment Status",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik dropdown list Employment Status
+3. Pilih salah satu Employment Status
+4. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan daftar Employment Status
+3. 
+4. Ditampilkan daftar Employee dengan Employment Status ""**Full-Time Contract**""
+","1. 
+2. 
+3. pilih ""**Full-Time Contract**""
+4. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+16,"Mencari Employee berdasarkan masih aktif bekerja atau tidak",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik dropdown list Inlcude
+3. Pilih ""**Current Employees Only**""
+4. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan daftar status bekerja
+3. 
+4. Ditampilkan daftar Employee dengan yang saat ini masih aktif bekerja
+","1. 
+2. 
+3. 
+4. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+17,"Mencari Employee berdasarkan nama Supervisor",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Isikan nama Supervisor
+3. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. 
+3. Ditampilkan daftar Employee yang memiliki nama sesuai nama Supervisor
+","1. 
+2. nama Supervisor: Cassidy Hope
+3. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+18,"Mencari Employee berdasarkan Job Title",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik dropdown list Job Title
+3. Pilih salah satu Job Title
+4. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan daftar Job Title
+3. 
+4. Ditampilkan daftar Employee dengan Job Title ""**QA Engineer**""
+","1. 
+2. 
+3. Pilih ""**QA Engineer**""
+4. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+19,"Mencari Employee berdasarkan Sub Unit",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik dropdown list Sub Unit
+3. Pilih salah satu Sub Unit
+4. Klik tombol Search
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan daftar Sub Unit
+3. 
+4. Ditampilkan daftar Employee dengan Sub Unit ""**Engineering**""
+","1. 
+2. 
+3. Pilih ""**Engineering**""
+4. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+20,"Reset Form Pencarian Employee",,"1. Sudah login ke OrangeHRM",,,low,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Isikan data pada salah satu field
+3. Klik tombol Reset
+","1. Ditampilkan halaman Employee List
+2. 
+3. Field pada form yg terisi akan diclear dan halaman Employee List dimuat ulang
+","1. 
+2. 
+3. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+21,"Menghapus data Employee",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik pada checkbox karyawan yang akan dihapus
+3. Klik Delete
+4. Klik OK
+","1. Ditampilkan halaman Employee List
+2. Checkbox pada data karyawan tercentang
+3. Ditampilkan modal untuk konfirmasi Delete data employee
+4. Halaman Employee List dimuat ulang dan ditampilkan pesan ""**Successfully Deleted**""
+","1. 
+2. 
+3. 
+4. 
+",1,"OrangeHRM 4.10.1",26,3,"Employee List",
+22,"Menambahkan Employee melalui halaman Employee List Tanpa Login Details",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik tombol Add
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Lampirkan foto dengan klik Choose File
+7. Pilih foto
+8. Klik tombol Open
+9. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan jendela untuk melampirkan foto
+7. 
+8. 
+9. User diredirect ke halaman Personal Detail Information
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 1. Bersifat opsional
+2. ekstensi file gambar jpg, .png, .gif
+3. ukuran maksimal 1 MB
+7. 
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+23,"Menambahkan Employee melalui halaman Employee List Dengan Login Details",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik tombol Add
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Lampirkan foto dengan klik Choose File
+7. Pilih foto
+8. Klik tombol Open
+9. Centang checkbox Create Login Details
+10. Isikan Username
+11. Isikan password
+12. Isikan konfirm password
+13. Klik dropdown list Status
+14. Pilih Status Enabled
+15. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan jendela untuk melampirkan foto
+7. 
+8. 
+9. Ditampilkan form pembuatan credential untuk Employee
+10. 
+11. Ditampilkan pesan seberapa kuat password
+12. 
+13. Ditampilkan daftar Status
+14. 
+15. User diredirect ke halaman Personal Detail Information
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 1. Bersifat opsional
+2. ekstensi file gambar jpg, .png, .gif
+3. ukuran maksimal 1 MB
+7. 
+8. 
+9. 
+10. username: ojan
+11. 1. password minimal 8 karakter
+2. password: ojanoke123
+12. password: ojanoke123
+13. 
+14. 
+15. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+24,"Menambahkan Employee melalui halaman Add Employee Tanpa Login Details",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Lampirkan foto dengan klik Choose File
+7. Pilih foto
+8. Klik tombol Open
+9. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan jendela untuk melampirkan foto
+7. 
+8. 
+9. User diredirect ke halaman Personal Detail Information
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 1. Bersifat opsional
+2. ekstensi file gambar jpg, .png, .gif
+3. ukuran maksimal 1 MB
+7. 
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+25,"Menambahkan Employee melalui halaman Add Employee Dengan Login Details",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Lampirkan foto dengan klik Choose File
+7. Pilih foto
+8. Klik tombol Open
+9. Centang checkbox Create Login Details
+10. Isikan Username
+11. Isikan password
+12. Isikan konfirm password
+13. Klik dropdown list Status
+14. Pilih Status Enabled
+15. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan jendela untuk melampirkan foto
+7. 
+8. 
+9. Ditampilkan form pembuatan credential untuk Employee
+10. 
+11. Ditampilkan pesan seberapa kuat password
+12. 
+13. Ditampilkan daftar Status
+14. 
+15. User diredirect ke halaman Personal Detail Information
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 1. Bersifat opsional
+2. ekstensi file gambar jpg, .png, .gif
+3. ukuran maksimal 1 MB
+7. 
+8. 
+9. 
+10. username: ojan
+11. 1. password minimal 8 karakter
+2. password: ojanoke123
+12. password: ojanoke123
+13. 
+14. 
+15. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+26,"Menambahkan Employee Failed with Empty Field",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Kosongkan First Name
+4. Kosongkan Middle Name
+5. Kosongkan Last Name
+6. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan pesan error ""**Required**"" pada field First Name dan Last Name
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+28,"Menambahkan Employee Failed with Empty First Name",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Kosongkan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan pesan error ""**Required**"" pada field First Name
+","1. 
+2. 
+3. 
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+29,"Menambahkan Employee Failed with Empty Last Name",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Kosongkan Last Name
+6. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan pesan error ""**Required**"" pada field Last Name
+","1. 
+2. 
+3. 
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+30,"Menambahkan Employee Dengan Login Details Failed with Empty Field",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Centang checkbox Create Login Details
+7. Kosongkan Username
+8. Kosongkan Password
+9. Kosongkan Confirm password
+10. Klik dropdown list Status
+11. Pilih Status Enabled
+12. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan form pembuatan credential untuk Employee
+7. 
+8. 
+9. 
+10. Ditampilkan daftar Status
+11. 
+12. Ditampilkan pesan error ""**Should have at least 5 characters**"" pada field Username dan ""**Should have at least 8 characters**"" pada field Password
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+31,"Menambahkan Employee Dengan Login Details Failed with Empty Username",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Centang checkbox Create Login Details
+7. Kosongkan Username
+8. Isikan Password
+9. Isikan Confirm password
+10. Klik dropdown list Status
+11. Pilih Status Enabled
+12. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan form pembuatan credential untuk Employee
+7. 
+8. Ditampilkan pesan seberapa kuat password
+9. 
+10. Ditampilkan daftar Status
+11. 
+12. Ditampilkan pesan error ""**Should have at least 5 characters**"" pada field Username
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 
+7. 
+8. 1. password minimal 8 karakter
+2. password: ojanoke123
+9. 1. password: ojanoke123
+10. 
+11. 
+12. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+32,"Menambahkan Employee Dengan Login Details Failed with Empty Password",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Centang checkbox Create Login Details
+7. Isikan Username
+8. Kosongkan Password
+9. Kosongkan Confirm password
+10. Klik dropdown list Status
+11. Pilih Status Enabled
+12. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan form pembuatan credential untuk Employee
+7. 
+8. 
+9. 
+10. Ditampilkan daftar Status
+11. 
+12. Ditampilkan pesan error ""**Should have at least 8 characters**"" pada field Password
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 
+7. username: ojan
+8. 
+9. 
+10. 
+11. 
+12. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+33,"Menambahkan Employee Dengan Login Details Failed with Mismatch Confirmation Password",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Centang checkbox Create Login Details
+7. Isikan Username
+8. Isikan Password
+9. Isikan Confirm password
+10. Klik dropdown list Status
+11. Pilih Status Enabled
+12. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan form pembuatan credential untuk Employee
+7. 
+8. Ditampilkan pesan seberapa kuat password
+9. 
+10. Ditampilkan daftar Status
+11. 
+12. Ditampilkan pesan error ""**Passwords do not match**"" pada field Confirm Password
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 
+7. username: ojan
+8. password: ojanoke123
+9. password: ojan1234
+10. 
+11. 
+12. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+34,"Menambahkan Employee Dengan Login Details Failed with Empty Confirmation Password",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu PIM
+2. Klik sub menu Add Employee
+3. Isikan First Name
+4. Isikan Middle Name
+5. Isikan Last Name
+6. Centang checkbox Create Login Details
+7. Isikan Username
+8. Isikan Password
+9. Kosongkan Confirm password
+10. Klik dropdown list Status
+11. Pilih Status Enabled
+12. Klik tombol Save
+","1. Ditampilkan halaman Employee List
+2. Ditampilkan halaman Add Employee
+3. 
+4. 
+5. 
+6. Ditampilkan form pembuatan credential untuk Employee
+7. 
+8. Ditampilkan pesan seberapa kuat password
+9. 
+10. Ditampilkan daftar Status
+11. 
+12. Ditampilkan pesan error ""**Passwords do not match**"" pada field Confirm Password dan kursor diaktifkan pada field Confirm Password
+","1. 
+2. 
+3. First name: Ojan
+4. Bersifat opsional
+5. Last name: Ganteng
+6. 
+7. username: ojan
+8. password: ojanoke123
+9. 
+10. 
+11. 
+12. 
+",1,"OrangeHRM 4.10.1",27,3,"Add Employee",
+36,"Menambahkan Entitlements Pada Satu Employee",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Leave
+2. Hover pointer mouse pada sub menu Entitlements
+3. Klik Add Entitlements
+4. Isikan nama Employee
+5. Klik drop down list Leave Type
+6. Klik drop down list Leave Period
+7. Isikan Entitlement
+8. Klik tombol Save
+","1. Ditampilkan halaman Leave List
+2. Ditampilkan menu dropdown dari sub menu Entitlements
+3. Ditampilkan halaman Add Leave Entitlement
+4. 
+5. Ditampilkan daftar tipe cuti
+6. Ditampilkan daftar periode cuti
+7. 
+8. Ditampilkan loading screen, user diredirect ke halaman Leave Entitlement dan ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. employee: Aaliyah Haq
+5. pilih US Vacation
+6. pilih Leave Period
+7. Isikan value numeric (merupakan lama hak cuti)
+8. 
+",1,"OrangeHRM 4.10.1",37,29,"Add Entitlements",
+37,"Menambahkan Entitlement Pada Employee Berdasarkan Lokasi",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Leave
+2. Hover pointer mouse pada sub menu Entitlements
+3. Klik Add Entitlements
+4. Klik checkbox **Add to Multiple Employees**
+5. Klik dropdown list Location
+6. Klik dropdown list Leave Type
+7. Isikan Entitlement
+8. Klik tombol Save
+","1. Ditampilkan halaman Leave List
+2. Ditampilkan menu dropdown dari sub menu Entitlements
+3. Ditampilkan halaman Add Leave Entitlement
+4. Ditampilkan field Location dan Sub Unit
+5. Ditampilkan daftar Location
+6. Ditampilkan daftar tipe cuti
+7. 
+8. Ditampilkan loading screen, user diredirect ke halaman Leave Entitlement dan ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. 
+5. Pilih United States
+6. Pilih US Personal
+7. Isikan value numeric (merupakan lama hak cuti)
+8. 
+",1,"OrangeHRM 4.10.1",37,29,"Add Entitlements",
+38,"Menambahkan Entitlement Pada Employee Berdasarkan Sub Unit",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Leave
+2. Hover pointer mouse pada sub menu Entitlements
+3. Klik Add Entitlements
+4. Klik checkbox **Add to Multiple Employees**
+5. Klik dropdown list Sub Unit
+6. Klik dropdown list Leave Type
+7. Isikan Entitlement
+8. Klik tombol Save
+","1. Ditampilkan halaman Leave List
+2. Ditampilkan menu dropdown dari sub menu Entitlements
+3. Ditampilkan halaman Add Leave Entitlement
+4. Ditampilkan field Location dan Sub Unit
+5. Ditampilkan daftar Sub Unit
+6. Ditampilkan daftar tipe cuti
+7. 
+8. Ditampilkan loading screen, user diredirect ke halaman Leave Entitlement dan ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. 
+5. Pilih Quality Assurance
+6. Pilih US Personal
+7. Isikan value numeric (merupakan lama hak cuti)
+8. 
+",1,"OrangeHRM 4.10.1",37,29,"Add Entitlements",
+39,"Menambahkan Entitlement Pada Semua Employee",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Leave
+2. Hover pointer mouse pada sub menu Entitlements
+3. Klik Add Entitlements
+4. Klik checkbox **Add to Multiple Employees**
+5. Klik dropdown list Location
+6. Klik dropdown list Sub Unit
+7. Klik dropdown list Leave Type
+8. Isikan Entitlement
+9. Klik tombol Save
+","1. Ditampilkan halaman Leave List
+2. Ditampilkan menu dropdown dari sub menu Entitlements
+3. Ditampilkan halaman Add Leave Entitlement
+4. Ditampilkan field Location dan Sub Unit
+5. 
+6. 
+7. Ditampilkan daftar tipe cuti
+8. 
+9. Ditampilkan loading screen, user diredirect ke halaman Leave Entitlement dan ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. 
+5. Pilih All
+6. Pilih All
+7. Pilih US Personal
+8. Isikan value numeric (merupakan lama hak cuti)
+9. 
+",1,"OrangeHRM 4.10.1",37,29,"Add Entitlements",
+40,"Menambahkan Entitlement Pada Employee Failed with Empty Field",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Leave
+2. Hover pointer mouse pada sub menu Entitlements
+3. Klik Add Entitlements
+4. Kosongkan nama Employee
+5. Kosongkan Entitlement
+6. Klik tombol Save
+","1. Ditampilkan halaman Leave List
+2. Ditampilkan menu dropdown dari sub menu Entitlements
+3. Ditampilkan halaman Add Leave Entitlement
+4. 
+5. 
+6. Ditampilkan pesan ""**Required**"" pada field Employee dan Entitlement
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",1,"OrangeHRM 4.10.1",37,29,"Add Entitlements",
+41,"Add Customer",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Time
+2. Hover pointer mouse pada sub menu Project Info
+3. Klik Customers
+4. Klik tombol Add
+5. Isikan Name
+6. Isikan Description
+7. Klik tombol Save
+","1. Ditampilkan halaman Employee Timesheet
+2. Ditampilkan menu dropdown dari sub menu Project Info
+3. Ditampilkan halaman view Customer
+4. Ditampilkan halaman add Customer
+5. 
+6. 
+7. User diredirect ke halaman view Customer dan ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. 
+5. nama perusahaan: MikroTik
+6. Bersifat optional
+7. 
+",1,"OrangeHRM 4.10.1",39,30,Customers,
+42,"Add Customer Failed with Empty Field",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Time
+2. Hover pointer mouse pada sub menu Project Info
+3. Klik Customers
+4. Klik tombol Add
+5. Kosongkan Name
+6. Kosongkan Description
+7. Klik tombol Save
+","1. Ditampilkan halaman Employee Timesheet
+2. Ditampilkan menu dropdown dari sub menu Project Info
+3. Ditampilkan halaman view Customer
+4. Ditampilkan halaman add Customer
+5. 
+6. 
+7. Ditampilkan pesan error ""Required"" pada field Name dan kursor diaktifkan pada field Name
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+",1,"OrangeHRM 4.10.1",39,30,Customers,
+43,"Batal Add Customer",,"1. Sudah login ke OrangeHRM",,,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Time
+2. Hover pointer mouse pada sub menu Project Info
+3. Klik Customers
+4. Klik tombol Add
+5. Klik tombol Cancel
+","1. Ditampilkan halaman Employee Timesheet
+2. Ditampilkan menu dropdown dari sub menu Project Info
+3. Ditampilkan halaman view Customer
+4. Ditampilkan halaman add Customer
+5. Ditampilkan halaman view Customer
+","1. 
+2. 
+3. 
+4. 
+5. 
+",1,"OrangeHRM 4.10.1",39,30,Customers,
+44,"Delete Customer",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Time
+2. Hover pointer mouse pada sub menu Project Info
+3. Klik Customers
+4. Klik checkbox pada daftar Customer
+5. Klik tombol Delete
+6. Klik OK
+","1. Ditampilkan halaman Employee Timesheet
+2. Ditampilkan menu dropdown dari sub menu Project Info
+3. Ditampilkan halaman view Customer
+4. 
+5. Ditampilkan modal konfirmasi untuk menghapus data Customer
+6. User diredirect ke halaman view Customer dan ditampilkan pesan ""**Saved Successfully**""
+","1. 
+2. 
+3. 
+4. klik checkbox MikroTik
+5. 
+6. 
+",1,"OrangeHRM 4.10.1",39,30,Customers,
+45,"Toggle form pencarian lowongan",,"1. Sudah login ke OrangeHRM",,,low,minor,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Recruitment
+2. Klik pada sub menu Vacancies
+3. Klik pada header Employee Information
+","1. Ditampilkan halaman view Candidates
+2. Ditampilkan halaman view Job Vacancies
+3. Form pencarian lowongan akan disembunyikan
+","1. 
+2. 
+3. 
+",1,"OrangeHRM 4.10.1",32,6,Vacancies,
+46,"Menambahkan Vacancies",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Recruitment
+2. Klik sub menu Vacancies
+3. Klik tombol Add
+4. Klik dropdown list Job Title
+5. Isikan Vacancy Name
+6. Isikan nama Hiring Manager
+7. Isikan number of Position
+8. Isikan Description
+9. Klik tombol Save
+","1. Ditampilkan halaman view Candidates
+2. Ditampilkan halaman view Job Vacancies
+3. Ditampilkan halaman add Job Vacancy
+4. Ditampilkan daftar Job Title
+5. 
+6. 
+7. 
+8. 
+9. Ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. pilih salah satu Job Title
+5. Isikan nama lowongan pekerjaan
+6. 
+7. 
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",32,6,Vacancies,
+47,"Menambahkan Vacancies Failed with Empty Field",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Recruitment
+2. Klik sub menu Vacancies
+3. Klik tombol Add
+4. Kosongkan field Job Title
+5. Kosongkan field Vacancy Name
+6. Kosongkan field Hiring Manager
+7. Kosongkan field Number of Positions
+8. Kosongkan Description
+9. Klik tombol Save
+","1. Ditampilkan halaman view Candidates
+2. Ditampilkan halaman view Job Vacancies
+3. Ditampilkan halaman add Job Vacancy
+4. 
+5. 
+6. 
+7. 
+8. 
+9. Ditampilkan pesan error ""**Required**"" pada field Job Title dan Vacancy Name, ditampilkan pesan error ""**Invalid**"" pada field Hiring Manager.
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",32,6,Vacancies,
+48,"Menambahkan Vacancies Failed with Invalid Hiring Manager",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Recruitment
+2. Klik sub menu Vacancies
+3. Klik tombol Add
+4. Klik dropdown list Job Title
+5. Isikan Vacancy Name
+6. Isikan nama Hiring Manager
+7. Isikan number of Position
+8. Isikan Description
+9. Klik tombol Save
+","1. Ditampilkan halaman view Candidates
+2. Ditampilkan halaman view Job Vacancies
+3. Ditampilkan halaman add Job Vacancy
+4. Ditampilkan daftar Job Title
+5. 
+6. 
+7. 
+8. 
+9. Ditampilkan pesan error ""**Invalid**"" dan kursor diaktifkan pada field Hiring Manager
+","1. 
+2. 
+3. 
+4. pilih salah satu Job Title
+5. Isikan nama lowongan pekerjaan
+6. Isikan nama Hiring Manager sembarang yang tidak terdaftar
+7. 
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",32,6,Vacancies,
+49,"Menambahkan Vacancies Failed with Empty Vacancy Name",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu Recruitment
+2. Klik sub menu Vacancies
+3. Klik tombol Add
+4. Klik dropdown list Job Title
+5. Kosongkan Vacancy Name
+6. Isikan nama Hiring Manager
+7. Isikan number of Position
+8. Isikan Description
+9. Klik tombol Save
+","1. Ditampilkan halaman view Candidates
+2. Ditampilkan halaman view Job Vacancies
+3. Ditampilkan halaman add Job Vacancy
+4. Ditampilkan daftar Job Title
+5. 
+6. 
+7. 
+8. 
+9. Ditampilkan pesan error ""**Required**"" dan kursor diaktifkan pada field Vacancy Name
+","1. 
+2. 
+3. 
+4. pilih salah satu Job Title
+5. 
+6. 
+7. 
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",32,6,Vacancies,
+50,"Menghapus Job Vacancy",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Recruitment
+2. Klik sub menu Vacancies
+3. Klik pada checkbox salah satu vacancy
+4. Klik tombol Delete
+5. Klik OK
+","1. Ditampilkan halaman view Candidates
+2. Ditampilkan halaman view Job Vacancies
+3. 
+4. Ditampilkan modal untuk konfirmasi delete Vacancy
+5. Ditampilkan pesan ""Successfully Deleted""
+","1. 
+2. 
+3. 
+4. 
+5. 
+",1,"OrangeHRM 4.10.1",32,6,Vacancies,
+51,"Menampilkan detail informasi personal",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+","1. Ditampilkan halaman view Personal Details
+","1. 
+",1,"OrangeHRM 4.10.1",7,,MyInfo,
+52,"Mengubah data personal",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+2. Klik tombol Edit pada bagian Personal Details
+3. Ubah salah satu field personal details
+4. Klik tombol Save
+","1. Ditampilkan halaman view Personal Details
+2. 
+3. 
+4. Ditampilkan pesan ""**Successfully Saved**""
+","1. 
+2. 
+3. 
+4. 
+",1,"OrangeHRM 4.10.1",7,,MyInfo,
+53,"Menambahkan Tracker",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Hover pointer mouse pada menu Performance
+2. Hover pointer mouse pada sub menu Configure
+3. Klik sub menu Trackers
+4. Klik tombol Add
+5. Isikan Tracker Name
+6. Isikan Employee Name
+7. Pilih salah satu available reviewers
+8. Klik tombol Add
+9. Klik tombol Save
+","1. Ditampilkan dropdown menu Performance
+2. Ditampilkan dropdown sub menu Configure
+3. Ditampilkan halaman add Performance Tracker
+4. Ditampilkan form untuk menambahkan Performance Tracker
+5. 
+6. 
+7. 
+8. 
+9. Ditampilkan pesan ""Successfully Saved""
+","1. 
+2. 
+3. 
+4. 
+5. tracker name: On time Check-In
+6. name: Aaliyah Haq
+7. reviewers: Alice Duval
+8. 
+9. 
+",1,"OrangeHRM 4.10.1",35,33,Trackers,
+54,"Menambahkan Tracker Failed with Empty Field",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Hover pointer mouse pada menu Performance
+2. Hover pointer mouse pada sub menu Configure
+3. Klik sub menu Trackers
+4. Klik tombol Add
+5. Kosongkan Tracker Name
+6. Kosongkan Employee Name
+7. Kosongkan reviewers
+8. Klik tombol Save
+","1. Ditampilkan dropdown menu Performance
+2. Ditampilkan dropdown sub menu Configure
+3. Ditampilkan halaman add Performance Tracker
+4. Ditampilkan form untuk menambahkan Performance Tracker
+5. 
+6. 
+7. 
+8. Ditampilkan:
+
+1. Pesan error ""Required"" pada field Tracker Name
+2. Pesan error ""invalid name"" pada field Employee Name
+3. Pesan error ""Required"" pada field added Reviewers
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+",1,"OrangeHRM 4.10.1",35,33,Trackers,
+55,"Menghapus Tracker",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Hover pointer mouse pada menu Performance
+2. Hover pointer mouse pada sub menu Configure
+3. Klik sub menu Trackers
+4. Klik checkbox pada daftar Employee Tracker
+5. Klik tombol Delete
+6. Klik OK
+","1. Ditampilkan dropdown menu Performance
+2. Ditampilkan dropdown sub menu Configure
+3. Ditampilkan halaman add Performance Tracker
+4. 
+5. Ditampikan modal untuk konfirmasi Delete Employee Tracker
+6. Ditampilkan pesan ""Successfully Deleted""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",1,"OrangeHRM 4.10.1",35,33,Trackers,
+56,"Menguji Menu Quick Launch",,"1. Sudah login ke OrangeHRM",,,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik pada salah satu icon menu Quik Launch
+","1. Ditampilkan halaman dari menu Quick Launch
+","1. 
+",1,"OrangeHRM 4.10.1",9,,Dashboard,
+57,"Memeriksa Paging",,"1. Sudah login ke OrangeHRM",,,high,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik pada menu Directory
+2. Klik pada tombol navigasi Next Page
+","1. Ditampilkan halaman view Directory
+2. Ditampilkan halaman berikutnya
+","1. 
+2. 
+",1,"OrangeHRM 4.10.1",10,,Directory,
+58,"Toggle Form Pencarian",,"1. Sudah login ke OrangeHRM",,,low,minor,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Directory
+2. Klik pada header form Search Directory
+","1. Ditampilkan halaman view Directory
+2. Form pencarian directory akan disembunyikan
+","1. 
+2. 
+",1,"OrangeHRM 4.10.1",10,,Directory,
+59,"Pencarian Direktori by Job Title",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Directory
+2. Isikan nama Employee
+3. Klik tombol Search
+","1. Ditampilkan halaman vie Directory
+2. 
+3. Ditampilkan daftar diirektori milik karyawan
+","1. 
+2. nama: Aaliyah Haq
+3. 
+",1,"OrangeHRM 4.10.1",10,,Directory,
+60,"Pencarian Direktori by Location",,"1. Sudah login ke OrangeHRM",,,high,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Directory
+2. Klik pada menu dropdown Location
+3. Pilih Location
+4. Klik tombol Search
+","1. Ditampilkan halaman view Directory
+2. Ditampilkan daftar Location
+3. 
+4. Ditampilkan daftar direktori karyawan yang berlokasi di United States
+","1. 
+2. 
+3. Location: United States
+4. 
+",1,"OrangeHRM 4.10.1",10,,Directory,
+61,"Pencarian Direktori Failed with Wrong Employee Name",,"1. Sudah login ke OrangeHRM",,,high,major,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik pada menu Directory
+2. Isikan Name
+3. Klik tombol Search
+","1. Ditampilkan view Directory
+2. 
+3. Ditampilkan pesan No Records Found
+","1. 
+2. name: Jojon
+3. 
+",1,"OrangeHRM 4.10.1",10,,Directory,
+62,"Mengunduh Employee Personal Data",,"1. Sudah login ke OrangeHRM",,,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Maintenance
+2. Klik sub menu Access Records
+3. Isikan password
+4. Klik tombol Verify
+5. Isikan nama Employee
+6. Klik tombol Search
+7. Klik tombol Download
+8. Klik tombol Download
+","1. Ditampilkan halaman Purge Employee
+2. Ditampilkan halaman access Employee Data
+3. 
+4. Ditampilkan form pencarian untuk Employee Personal Data
+5. 
+6. Ditampilkan hasil pencarian Employee
+7. Ditampilkan modal untuk konfirmasi pengunduhan data Employee
+8. File diunduh oleh browser dalam bentuk .json
+","1. 
+2. 
+3. password: admin123
+4. 
+5. name: Aaliyah Haq
+6. 
+7. 
+8. 
+",1,"OrangeHRM 4.10.1",36,11,"Access Records",
+63,"Mengunduh Employee Personal Data Failed with Wrong Password",,"1. Sudah login ke OrangeHRM",,,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Buka menu Maintenance
+2. Klik sub menu Access Records
+3. Isikan password
+4. Klik tombol verify
+","1. Ditampilkan halaman Purge Employee
+2. Ditampilkan halaman Access Employee Data
+3. 
+4. Ditampilkan pesan error ""Incorrect Password""
+","1. 
+2. 
+3. password: testpass
+4. 
+",1,"OrangeHRM 4.10.1",36,11,"Access Records",
+64,"Update Status",,"1. Sudah login ke OrangeHRM",,,medium,major,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Buka menu Buzz
+2. Ketikan kalimat pada kolom ""What's on your mind?""
+3. Klik tombol Post
+","1. Ditampilkan halaman view Buzz
+2. 
+3. Post yang baru saja dibuat akan ditampilkan
+","1. 
+2. 
+3. 
+",1,"OrangeHRM 4.10.1",12,,Buzz,
