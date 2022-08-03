@@ -20,8 +20,8 @@ class Job(unittest.TestCase):
     def setUp(self): 
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
     
-    #Test Case 7   
-    def test_FPQBS_7(self): 
+    #Test Case 11   
+    def test_FPQBS_11(self): 
         driver = self.driver
         driver.get(url)
         time.sleep(3)
@@ -31,26 +31,17 @@ class Job(unittest.TestCase):
         time.sleep(1)
         driver.find_element(By.ID,"btnLogin").click() # klik tombol sign in 
         time.sleep(1)
-        driver.find_element(By.ID,"menu_admin_viewAdminModule").click()
+        driver.find_element(By.ID,"menu_pim_viewPimModule").click() # klik menu PIM
         time.sleep(1)
-        Hover = ActionChains(driver).move_to_element(driver.find_element(By.ID,"menu_admin_Job")).move_to_element(driver.find_element(By.ID,"menu_admin_viewJobTitleList"))
-        time.sleep(1)       
-        Hover.click().perform()
-        time.sleep(2)
-        driver.find_element(By.ID,"btnAdd").click()
-        time.sleep(3)
-        driver.find_element(By.ID,"jobTitle_jobTitle").send_keys("DevOps") # isi Job Title      
+        driver.find_element(By.ID,"empsearch_employee_name_empName").send_keys("Sania")    # isi nama employee untuk search  
         time.sleep(1)
-        driver.find_element(By.ID,"jobTitle_jobDescription").send_keys("") # isi Job Desc      
-        time.sleep(1)
-        driver.find_element(By.ID,"jobTitle_note").send_keys("") # isi Job note      
-        time.sleep(1)
-        driver.find_element(By.ID,"btnSave").click() # klik tombol save
+        driver.find_element(By.ID,"searchBtn").click() # klik tombol search
    
 
         # validasi
         response_data = driver.find_element(By.ID,"resultTable").text
-        self.assertIn('DevOps',response_data)   
+
+        self.assertIn('Sania',response_data)   
 
     def tearDown(self): 
         self.driver.close() 

@@ -18,7 +18,7 @@ class TestLogin(unittest.TestCase):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
         
     #Test Case 1   
-    def test_a_success_login(self): 
+    def test_FPQBS_1(self): 
         # steps
         driver = self.driver # buka web browser
         driver.get(url) # buka situs
