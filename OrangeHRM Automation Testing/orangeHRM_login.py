@@ -41,7 +41,7 @@ class TestLogin(unittest.TestCase):
         driver.get(url) # buka situs
         time.sleep(3)
 
-        driver.find_element(By.ID,"txtUsername").send_keys("testlogin") # isi username
+        driver.find_element(By.ID,"txtUsername").send_keys("testlogin") # isi wrong username
         time.sleep(1)
         driver.find_element(By.ID,"txtPassword").send_keys(password) # isi password
         time.sleep(1)
@@ -61,7 +61,7 @@ class TestLogin(unittest.TestCase):
 
         driver.find_element(By.ID,"txtUsername").send_keys(username) # isi username
         time.sleep(1)
-        driver.find_element(By.ID,"txtPassword").send_keys("passAdmin") # isi password
+        driver.find_element(By.ID,"txtPassword").send_keys("passAdmin") # isi wrong password
         time.sleep(1)
         driver.find_element(By.ID,"btnLogin").click() # klik tombol sign in
         time.sleep(1)
@@ -79,7 +79,7 @@ class TestLogin(unittest.TestCase):
 
         driver.find_element(By.ID,"txtUsername").send_keys(username) # isi username
         time.sleep(1)
-        driver.find_element(By.ID,"txtPassword").send_keys("") # isi password
+        driver.find_element(By.ID,"txtPassword").send_keys("") # kosongkan password
         time.sleep(1)
         driver.find_element(By.ID,"btnLogin").click() # klik tombol sign in
         time.sleep(1)
@@ -95,7 +95,7 @@ class TestLogin(unittest.TestCase):
         driver.get(url) # buka situs
         time.sleep(3)
 
-        driver.find_element(By.ID,"txtUsername").send_keys("") # isi username
+        driver.find_element(By.ID,"txtUsername").send_keys("") # kosongkan username
         time.sleep(1)
         driver.find_element(By.ID,"txtPassword").send_keys(password) # isi password
         time.sleep(1)
@@ -113,9 +113,9 @@ class TestLogin(unittest.TestCase):
         driver.get(url) # buka situs
         time.sleep(3)
 
-        driver.find_element(By.ID,"txtUsername").send_keys("") # isi username
+        driver.find_element(By.ID,"txtUsername").send_keys("") # kosongkan username
         time.sleep(1)
-        driver.find_element(By.ID,"txtPassword").send_keys("") # isi password
+        driver.find_element(By.ID,"txtPassword").send_keys("") # kosongkan password
         time.sleep(1)
         driver.find_element(By.ID,"btnLogin").click() # klik tombol sign in
         time.sleep(1)
